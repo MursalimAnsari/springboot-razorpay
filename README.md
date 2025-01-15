@@ -9,21 +9,28 @@ Step 2:  Generate a new API key and save the Key ID and Key Secret securely for 
 ---
 
 Step 3:  Create Springboot Project
-        a) add necessary dependencies: 
-         i) Springboot starter web
-        ii)	Springboot data jpa
-       iii) mysql drvier		
-	      iv) Lombok
-		     v) Thymeleaf
-		    vi) Razorpay Java Dependency
-      
-       <dependency>
-        <groupId>com.razorpay</groupId>
-        <artifactId>razorpay-java</artifactId>
-        <version>1.3.0</version>
-       </dependency>
+        ## Add Necessary Dependencies
 
-       ###Configurations
+To create a Spring Boot project, include the following dependencies:
+
+1. **Spring Boot Starter Web**  
+2. **Spring Boot Data JPA**  
+3. **MySQL Driver**  
+4. **Lombok**  
+5. **Thymeleaf**  
+6. **Razorpay Java Dependency**
+
+Add the Razorpay dependency in the `pom.xml` file:
+
+```xml
+<dependency>
+    <groupId>com.razorpay</groupId>
+    <artifactId>razorpay-java</artifactId>
+    <version>1.3.0</version>
+</dependency>
+
+
+ ### Configurations
         spring.application.name=RazorPayIntegeration
         server.port = 8081
         #DATABASE CONFIGURATIONS
