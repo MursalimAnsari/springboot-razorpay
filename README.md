@@ -1,7 +1,13 @@
 ### HOW TO USE
 
+---
 Step 1:  Setup Razorpay Account
+
+---
 Step 2:  Generate a new API key and save the Key ID and Key Secret securely for Test/Live Mode.
+
+---
+
 Step 3:  Create Springboot Project
         a) add necessary dependencies: 
          i) Springboot starter web
@@ -34,7 +40,7 @@ Step 3:  Create Springboot Project
         # Razorpay configurations
         razorpay.key =rzp_test_abczUJfEMHgyOt
         razorpay.secret =klvUKclzmiCp5KAPirBgeI6r
-
+---
 Step 4:  Create Order
 @Service
 public class OrderServiceImpl implements OrderService {
@@ -86,31 +92,35 @@ public class OrderServiceImpl implements OrderService {
         orderRepository.save(order);
     }
 }
+---
+
 Step 7: Test Application 
     BASE_URL = " http://localhost:8081/api/orders"
    1) Create Order
+---
    post end points: /create-order 
    Payload:    {
                 "userId": 1,
                 "productId": 1,
                 "amount": 180000
               }
-      
+ ---     
   3) Callback to update Order
      1) Upate Order
-   post end points: /callback 
+   post end points: /callback
+---
    Payload:    {
                "razorpayOrderId": "order_PjcL2DFPm4AYDT",
                "razorpayPaymentId": "1234",
                "razorpaySignature": "Hs12312"
              }
-   
+ ---  
 Step 8: Frontend Integration
    Include Razorpay Checkout Script
    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
-
-###Future Works :
+---
+# Future Works :
 1) We can Provide user Interface to create Order using frontend technologies such as Reactjs/Angular.
 2) Provide Live mode credentials to get payments in real time 
 3) Orders can be maintained using message broker(Apache kafka, RabbitMQ) for high throughput. 
