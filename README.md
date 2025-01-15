@@ -110,7 +110,8 @@ Step 7: Test Application
      1) Upate Order
    post end points: /callback
 ---
-   Payload:    {
+```json
+ Payload:    {
                "razorpayOrderId": "order_PjcL2DFPm4AYDT",
                "razorpayPaymentId": "1234",
                "razorpaySignature": "Hs12312"
