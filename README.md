@@ -1,4 +1,4 @@
-# HOW TO USE
+### HOW TO USE
 
 Step 1:  Setup Razorpay Account
 Step 2:  Generate a new API key and save the Key ID and Key Secret securely for Test/Live Mode.
@@ -17,7 +17,7 @@ Step 3:  Create Springboot Project
         <version>1.3.0</version>
        </dependency>
 
-       #Configurations
+       ###Configurations
         spring.application.name=RazorPayIntegeration
         server.port = 8081
         #DATABASE CONFIGURATIONS
@@ -110,7 +110,7 @@ Step 8: Frontend Integration
    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
 
-#Future Works :
+###Future Works :
 1) We can Provide user Interface to create Order using frontend technologies such as Reactjs/Angular.
 2) Provide Live mode credentials to get payments in real time 
 3) Orders can be maintained using message broker(Apache kafka, RabbitMQ) for high throughput. 
