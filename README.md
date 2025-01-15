@@ -32,23 +32,23 @@ Add the Razorpay dependency in the `pom.xml` file:
 ### Configurations
 
 #### Application Configuration
-```properties
-spring.application.name = RazorPayIntegration
-server.port = 8081
-# Database Configurations
-spring.datasource.url = jdbc:mysql://localhost:3306/cosmostaker_orders
-spring.datasource.username = root
-spring.datasource.password = root
-spring.datasource.driver-class-name = com.cj.jdbc.Driver
-# JPA Configuration
-spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL8Dialect
-spring.jpa.hibernate.ddl-auto = update
-spring.jpa.show-sql = true
-spring.jpa.properties.hibernate.format_sql = true
-spring.jpa.properties.hibernate.enable_lazy_load_no_trans = true
-# Razorpay Configurations
-razorpay.key = rzp_test_abczUJfEMHgyOt
-razorpay.secret = klvUKclzmiCp5KAPirBgeI6r
+        ```properties
+        spring.application.name = RazorPayIntegration
+        server.port = 8081
+        # Database Configurations
+        spring.datasource.url = jdbc:mysql://localhost:3306/cosmostaker_orders
+        spring.datasource.username = root
+        spring.datasource.password = root
+        spring.datasource.driver-class-name = com.cj.jdbc.Driver
+        # JPA Configuration
+        spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL8Dialect
+        spring.jpa.hibernate.ddl-auto = update
+        spring.jpa.show-sql = true
+        spring.jpa.properties.hibernate.format_sql = true
+        spring.jpa.properties.hibernate.enable_lazy_load_no_trans = true
+        # Razorpay Configurations
+        razorpay.key = rzp_test_abczUJfEMHgyOt
+        razorpay.secret = klvUKclzmiCp5KAPirBgeI6r
 
 
 Step 4:  Create Order
