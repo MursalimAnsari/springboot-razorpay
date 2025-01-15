@@ -1,15 +1,15 @@
 package com.cosmostaker.dto;
 
 
-public class PaymentCallbackDto {
+public class OrderCallbackDto {
     private String razorpayOrderId;
     private String razorpayPaymentId;
     private String razorpaySignature;
 
-    public PaymentCallbackDto() {
+    public OrderCallbackDto() {
     }
 
-    public PaymentCallbackDto(String razorpayOrderId, String razorpayPaymentId, String razorpaySignature) {
+    public OrderCallbackDto(String razorpayOrderId, String razorpayPaymentId, String razorpaySignature) {
         this.razorpayOrderId = razorpayOrderId;
         this.razorpayPaymentId = razorpayPaymentId;
         this.razorpaySignature = razorpaySignature;

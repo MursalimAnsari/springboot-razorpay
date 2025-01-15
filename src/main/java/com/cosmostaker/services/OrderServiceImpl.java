@@ -1,6 +1,6 @@
 package com.cosmostaker.services;
 
-import com.cosmostaker.dto.PaymentCallbackDto;
+import com.cosmostaker.dto.OrderCallbackDto;
 import com.cosmostaker.entities.Orders;
 import com.cosmostaker.exception.ResourceNotFoundException;
 import com.cosmostaker.repositories.OrderRepository;
@@ -11,14 +11,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class PaymentServiceImpl implements PaymentService {
+public class OrderServiceImpl implements OrderService {
 
 
     private final RazorpayClient razorpayClient;
     private final OrderRepository orderRepository;
 
     @Autowired
-    public PaymentServiceImpl(RazorpayClient razorpayClient, OrderRepository orderRepository) {
+    public OrderServiceImpl(RazorpayClient razorpayClient, OrderRepository orderRepository) {
         this.razorpayClient = razorpayClient;
         this.orderRepository = orderRepository;
     }
@@ -46,7 +46,7 @@ public class PaymentServiceImpl implements PaymentService {
     }
 
     @Override
-    public void handlePaymentCallback(PaymentCallbackDto callback) {
+    public void handlePaymentCallback(OrderCallbackDto callback) {
         Orders order = orderRepository.findByRazorpayOrderId(callback.getRazorpayOrderId())
                 .orElseThrow(() -> new ResourceNotFoundException("Order not found"));
 

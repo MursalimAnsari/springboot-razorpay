@@ -1,9 +1,9 @@
 package com.cosmostaker.contollers;
 
 
-import com.cosmostaker.dto.PaymentCallbackDto;
+import com.cosmostaker.dto.OrderCallbackDto;
 import com.cosmostaker.entities.Orders;
-import com.cosmostaker.services.PaymentService;
+import com.cosmostaker.services.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,11 +12,11 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/orders/")
-public class PaymentController {
-    private final PaymentService paymentService;
+public class OrderController {
+    private final OrderService paymentService;
 
     @Autowired
-    public PaymentController(PaymentService paymentService) {
+    public OrderController(OrderService paymentService) {
         this.paymentService = paymentService;
     }
 
@@ -37,7 +37,7 @@ public class PaymentController {
 
 
     @PostMapping("/callback")
-    public ResponseEntity<String> handleCallback(@RequestBody PaymentCallbackDto callback) {
+    public ResponseEntity<String> handleCallback(@RequestBody OrderCallbackDto callback) {
         paymentService.handlePaymentCallback(callback);
         return ResponseEntity.ok("Payment processed successfully.");
     }
