@@ -1,6 +1,6 @@
 ### HOW TO USE
 
----
+
 Step 1:  Setup Razorpay Account
 
 ---
@@ -42,6 +42,7 @@ Step 3:  Create Springboot Project
         razorpay.secret =klvUKclzmiCp5KAPirBgeI6r
 ---
 Step 4:  Create Order
+
 @Service
 public class OrderServiceImpl implements OrderService {
 
@@ -98,12 +99,12 @@ Step 7: Test Application
     BASE_URL = " http://localhost:8081/api/orders"
    1) Create Order
 ---
-   post end points: /create-order 
-   Payload:    {
-                "userId": 1,
-                "productId": 1,
-                "amount": 180000
-              }
+  ```json
+{
+  "userId": 1,
+  "productId": 1,
+  "amount": 180000
+}
  ---     
   3) Callback to update Order
      1) Upate Order
