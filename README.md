@@ -22,12 +22,17 @@ To create a Spring Boot project, include the following dependencies:
 
 Add the Razorpay dependency in the `pom.xml` file:
 
-```xml
-<dependency>
-    <groupId>com.razorpay</groupId>
-    <artifactId>razorpay-java</artifactId>
-    <version>1.3.0</version>
-</dependency>
+## Dependencies
+
+Add the following dependency to your `pom.xml` file:
+
+        ```xml
+        <dependency>
+            <groupId>com.razorpay</groupId>
+            <artifactId>razorpay-java</artifactId>
+            <version>1.3.0</version>
+        </dependency>
+
 
 ### Configurations
 
